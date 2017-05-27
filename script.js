@@ -83,21 +83,32 @@ myBirthmonth1();
 //task 7
 
 function myOnehundred() {
-    var num = prompt('Enter number greater than 100', '0');
-    while (num < 100) {
+    var input = prompt('Enter number greater than 100', '0');
+    var num = parseInt(input);
+    if (isNaN(num)) {
+        alert('Enter number!');
         myOnehundred();
-        break;
+    } else {
+        while (num <= 100) {
+            myOnehundred();
+            break;
+        }
+        if (num > 100) {
+            alert(num);
+        }
     }
-    if (num > 100)
-        alert(num);
 }
+
 myOnehundred();
 //task 7.1
 function myOnehundred1() {
-    do var num = prompt('Enter number greater than 100', '0');
-    while (num < 100) {
-        alert(num);
+    var num = 0;
+    do {
+        num = parseInt(prompt('Enter number greater than 100', '0'));
     }
+    while (num <= 100 && typeof num !== 'string')
+    alert(num);
+
 }
 myOnehundred1();
 //task 8
